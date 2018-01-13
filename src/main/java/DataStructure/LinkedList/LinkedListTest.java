@@ -8,27 +8,7 @@ public class LinkedListTest {
 
   public static void main (String...s) throws Exception
   {
-    LinkedList<String> ll = new LinkedList<>();
 
-    System.out.println("size-->"+ll.size());
-
-    ll.add("first");
-    System.out.println(ll.toString());
-    ll.add(1, "second");
-    System.out.println(ll.toString());
-
-    ll.addAll(Arrays.asList("A","B"));
-    System.out.println(ll.toString());
-    ll.addFirst("F");
-    System.out.println(ll.toString());
-    ll.addLast("E");
-    System.out.println(ll.toString());
-    System.out.println(ll.contains("E"));
-    System.out.println(ll.element());
-    System.out.println(ll.get(2));
-    Iterator iterator = ll.descendingIterator();
-    iterator.forEachRemaining(x-> System.out.print(x+" "));
-    ll.peek();
 
     
 
@@ -58,19 +38,8 @@ public class LinkedListTest {
     lc.removeFirst();
     System.out.println(lc.toString());
 
-    lc.removeLast();
-    System.out.println(lc.toString());
-
-
-
-    lc.remove(1);
-    System.out.println(lc.toString());
-    lc.remove(2);
-    System.out.println(lc.toString());
-    lc.remove(3);
-    System.out.println(lc.toString());
-    lc.remove(4);
-    System.out.println(lc.toString());
+    System.out.println(lc.nth_element_from_end(5));
+    System.out.println(lc.nth_element_from_end(3));
 
 
   }

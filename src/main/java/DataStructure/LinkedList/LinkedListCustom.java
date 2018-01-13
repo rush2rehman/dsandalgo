@@ -1,5 +1,7 @@
 package DataStructure.LinkedList;
 
+import java.util.HashMap;
+
 public class LinkedListCustom<K> {
 
   private Node head;
@@ -25,12 +27,12 @@ public class LinkedListCustom<K> {
     return output;
   }
 
-  public K peak()
+  public Node peak()
   {
     Node<K> node = this.head;
-    K peakValue = node.value;
+    //K peakValue = node.value;
 
-    return peakValue;
+    return node;
   }
 
   public void addLast(K last) {
@@ -184,6 +186,49 @@ public class LinkedListCustom<K> {
       }
       previousNode.next = node.next;
 
+    }
+
+
+
+  }
+
+  public int search(K value)
+  {
+    int index = 0;
+    for(Node node = head; node != null; node = node.next)
+    {
+      index++;
+      if(value.equals(node.value))
+      {
+        return index;
+      }
+    }
+
+
+    return -1;
+  }
+
+  public K nth_element_from_end(int index)
+  {
+
+
+    int size = 0;
+    HashMap<Integer, K> tempValueMap = new HashMap<>();
+
+    for (Node<K> node = head; node != null; node = node.next )
+    {
+      size++;
+      tempValueMap.put(size, node.value);
+
+    }
+
+    if(size < index)
+    {
+      throw new IndexOutOfBoundsException();
+    }
+    else
+    {
+      return tempValueMap.get(size-(index-1));
     }
 
   }
