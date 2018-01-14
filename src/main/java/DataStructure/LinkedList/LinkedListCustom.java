@@ -37,6 +37,10 @@ public class LinkedListCustom<K> {
 
   public void addLast(K last) {
     Node nodeTobeAdded = new Node(last,null);
+    addLastNode(nodeTobeAdded);
+  }
+
+  public void addLastNode(Node nodeTobeAdded) {
     Node head = this.head;
     Node tail = this.tail;
     if(head == null)
