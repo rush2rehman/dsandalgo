@@ -6,6 +6,15 @@ public class QueueFromCircularArray {
 
   private int top = -1;
   private int tail = -1;
+
+  public int getQueueSize() {
+    return queueSize;
+  }
+
+  public void setQueueSize(int queueSize) {
+    this.queueSize = queueSize;
+  }
+
   private int queueSize;
   private int queueCapacity;
   private int[] elementArray;

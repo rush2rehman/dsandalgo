@@ -14,10 +14,11 @@ public class StackUsingLL<K> {
     stackLL.addFirst(value);
   }
 
-  public void pop()
+  public Node pop()
   {
-    stackLL.peak();
+    Node node = stackLL.peak();
     stackLL.removeFirst();
+    return node;
   }
 
   public K peek()
@@ -32,8 +33,7 @@ public class StackUsingLL<K> {
   }
 
 
-
-
-
-
+  public boolean isEmpty() {
+    return stackLL.getSize()==0;
+  }
 }
